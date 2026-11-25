@@ -44,7 +44,7 @@ a{color:inherit;text-decoration:none}
 .card h4{color:var(--acc);font-size:13px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px}.card p{font-size:13px;color:var(--mut)}
 .proj{display:grid;grid-template-columns:1.2fr 1fr;gap:36px;align-items:center;padding:44px 0;border-top:1px solid var(--line)}
 .proj.flip .shots{order:2}
-.shots{display:grid;gap:10px}.shots img{width:100%;border-radius:14px;border:1px solid var(--line);cursor:zoom-in;transition:.3s;box-shadow:0 20px 50px #0004}.shots img:hover{transform:scale(1.015)}
+.shots{display:grid;gap:10px}.shots.four{grid-template-columns:1fr 1fr}.shots img{width:100%;border-radius:14px;border:1px solid var(--line);cursor:zoom-in;transition:.3s;box-shadow:0 20px 50px #0004}.shots img:hover{transform:scale(1.015)}
 .num{font-size:60px;font-weight:900;color:transparent;-webkit-text-stroke:1px var(--acc);line-height:1}
 .info h3{font-size:26px;line-height:1.2;margin:6px 0 10px}.info p{color:var(--mut);font-size:14px}.info .tag{color:var(--acc)}
 .kpis{display:flex;gap:10px;margin:16px 0}.kpis div{flex:1;background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:10px 12px}
@@ -158,21 +158,21 @@ const PROJECTS=[
 {n:"01",tag:"POWER BI · MEDIA",title:"Netflix Content Analytics",img:"69-netflix-1.jpg",img2:"70-netflix-2.jpg",
  text:"A 3-page dashboard on what the Netflix catalog is made of: type, country, genre, audience rating and timing. Data cleaned in Python and Power Query. The cleaned data has 8,786 titles; the dashboard KPI card shows 8,785 because one movie is not counted (a known gap in the repo README).",
  kpis:[["8,786","Titles (cleaned)"],["42","Genres"],["2008-21","Years added"]],tools:["Power BI","Python","Power Query","DAX"],link:"https://github.com/mohamedsalem26/NetFlix"},
-{n:"02",tag:"POWER BI · SUPPLY CHAIN",title:"Supply Chain Management Dashboard",img:"82-supply-chain-1.jpg",img2:"83-supply-chain-2.jpg",
- text:"A multi-page Power BI report on supply chain performance. Data prepared in Power Query, with KPIs, charts and slicers for sales, shipping and quality.",
- tools:["Power BI","Power Query","DAX"],link:"https://github.com/mohamedsalem26/-Supply-Chain-Management"},
-{n:"03",tag:"POWER BI · RETAIL SALES",title:"Retail Sales Analytics Dashboard",img:"78-retail-1.jpg",img2:"79-retail-2.jpg",
- text:"Sales by customer demographics, time of day, departments and commodities, with dynamic KPIs and slicers to spot top-performing segments.",
- kpis:[["172.81K","Total sales"],["3K","Households"],["69.12","Avg order value"]],tools:["Power BI","DAX","Slicers"],link:"https://github.com/mohamedsalem26/SupplyChain"},
-{n:"04",tag:"SQL SERVER · EXCEL · BANKING",title:"Banque Misr Banking Performance",img:"62-bank-misr.jpg",
- text:"A relational database built in SQL Server with four analytical views, feeding an Excel dashboard for deposits, channels, branches and loans across 5 Egyptian cities.",
- kpis:[["EGP 299M","Total deposits"],["EGP 237M","Loan portfolio"],["EGP 18.6K","Avg transaction"]],tools:["SQL Server","Excel","Power Query"],link:"https://github.com/mohamedsalem26/BankMisr"},
-{n:"05",tag:"POWER BI · TELECOM",title:"Customer Churn & Retention Dashboard",img:"67-churn.jpg",
- text:"A dark-themed dashboard on about 7,000 telecom customers: DAX KPI cards, customers by service type and payment method, and gender filtering.",
- kpis:[["5.47M","Yearly charges"],["3.6K","Admin tickets"],["38.4%","Streaming TV"]],tools:["Power BI","DAX","Slicers"],link:"https://github.com/mohamedsalem26/Customer-Churn-Analysis"},
-{n:"06",tag:"POWER BI · E-LEARNING",title:"Udemy Courses Analytics",ph:"Udemy",
+{n:"02",tag:"POWER BI · E-LEARNING",title:"Udemy Courses Analytics",img:"3-udemy-1.jpg",img2:"4-udemy-2.jpg",more:["6-udemy-3.jpg","8-udemy-4.jpg"],
  text:"A 4-page report on Udemy's course catalog: reach, pricing, engagement and publishing trends. Custom in-report navigation and Level/Subject slicers, styled in Udemy's purple and black.",
  tools:["Power BI","DAX","Cross-filtering"],link:"https://github.com/mohamedsalem26/Udemy"},
+{n:"03",tag:"POWER BI · SUPPLY CHAIN",title:"Supply Chain Management Dashboard",img:"82-supply-chain-1.jpg",img2:"83-supply-chain-2.jpg",
+ text:"A multi-page Power BI report on supply chain performance. Data prepared in Power Query, with KPIs, charts and slicers for sales, shipping and quality.",
+ tools:["Power BI","Power Query","DAX"],link:"https://github.com/mohamedsalem26/-Supply-Chain-Management"},
+{n:"04",tag:"POWER BI · RETAIL SALES",title:"Retail Sales Analytics Dashboard",img:"78-retail-1.jpg",img2:"79-retail-2.jpg",
+ text:"Sales by customer demographics, time of day, departments and commodities, with dynamic KPIs and slicers to spot top-performing segments.",
+ kpis:[["172.81K","Total sales"],["3K","Households"],["69.12","Avg order value"]],tools:["Power BI","DAX","Slicers"],link:"https://github.com/mohamedsalem26/SupplyChain"},
+{n:"05",tag:"SQL SERVER · EXCEL · BANKING",title:"Banque Misr Banking Performance",img:"62-bank-misr.jpg",
+ text:"A relational database built in SQL Server with four analytical views, feeding an Excel dashboard for deposits, channels, branches and loans across 5 Egyptian cities.",
+ kpis:[["EGP 299M","Total deposits"],["EGP 237M","Loan portfolio"],["EGP 18.6K","Avg transaction"]],tools:["SQL Server","Excel","Power Query"],link:"https://github.com/mohamedsalem26/BankMisr"},
+{n:"06",tag:"POWER BI · TELECOM",title:"Customer Churn & Retention Dashboard",img:"67-churn.jpg",
+ text:"A dark-themed dashboard on about 7,000 telecom customers: DAX KPI cards, customers by service type and payment method, and gender filtering.",
+ kpis:[["5.47M","Yearly charges"],["3.6K","Admin tickets"],["38.4%","Streaming TV"]],tools:["Power BI","DAX","Slicers"],link:"https://github.com/mohamedsalem26/Customer-Churn-Analysis"},
 {n:"07",tag:"POWER BI · HR ANALYTICS",title:"HR Attrition & Workforce Dashboard",img:"65-hr.jpg",
  text:"Attrition, pay by department, demographics and training across the workforce, with slicers for travel, gender and overtime.",
  kpis:[["2,925","Employees"],["16.82%","Attrition"],["8K","Training sessions"]],tools:["Power BI","DAX","Data modeling"]},
@@ -185,7 +185,7 @@ const PROJECTS=[
 </script><script>const $=s=>document.querySelector(s);
 $('#theme').onclick=()=>{const t=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=t;try{localStorage.setItem('theme',t)}catch(e){}};
 $('#skillCards').innerHTML=SKILLS.map(s=>`<div class="card reveal"><h4>${s[0]}</h4><p>${s[1]}</p></div>`).join('');
-$('#projectList').innerHTML=PROJECTS.map((p,i)=>`<article class="proj reveal ${i%2?'flip':''}"><div class="shots">${p.ph?`<div class="ph">${p.ph}</div>`:[p.img,p.img2].filter(Boolean).map(x=>`<img loading="lazy" src="${x}" alt="${p.title}">`).join('')}</div>
+$('#projectList').innerHTML=PROJECTS.map((p,i)=>`<article class="proj reveal ${i%2?'flip':''}"><div class="shots${p.more?' four':''}">${p.ph?`<div class="ph">${p.ph}</div>`:[p.img,p.img2,...(p.more||[])].filter(Boolean).map(x=>`<img loading="lazy" src="${x}" alt="${p.title}">`).join('')}</div>
 <div class="info"><b class="num">${p.n}</b><p class="tag">${p.tag}</p><h3>${p.title}</h3><p>${p.text}</p>
 ${p.kpis?`<div class="kpis">${p.kpis.map(k=>`<div><strong>${k[0]}</strong><span>${k[1]}</span></div>`).join('')}</div>`:''}
 <div class="chips">${p.tools.map(t=>`<span>${t}</span>`).join('')}</div>${p.link?`<a class="btn small" href="${p.link}" target="_blank" rel="noopener">View repository</a>`:''}</div></article>`).join('');
